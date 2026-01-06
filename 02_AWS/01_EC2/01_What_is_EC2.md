@@ -36,3 +36,24 @@ EC2 Dashboard → Instances → Select Instance → Security Tab
 After the instance was in Running state, I connected to the server using EC2 Instance Connect (browser-based SSH).
 <img width="2473" height="888" alt="image" src="https://github.com/user-attachments/assets/e5d706f6-97e0-4f1c-93a7-bfcfe751011e" />
 
+
+🌐 EC2 Public IP vs Private IP Behavior
+
+By default, an Amazon EC2 instance is assigned both a public IP and a private IP address.
+
+Public IP Address
+
+The public IP is temporary.
+
+When an EC2 instance is stopped and started again, AWS automatically releases the existing public IP and assigns a new public IP.
+
+This happens because public IPs are managed from a shared AWS pool and are not permanent by default.
+
+Private IP Address
+
+The private IP is permanent within the VPC.
+
+It remains the same even after stop/start or reboot operations.
+
+This ensures stable internal communication between services inside the AWS network.
+
